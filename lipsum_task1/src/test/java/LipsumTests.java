@@ -29,14 +29,14 @@ public class LipsumTests {
     public void checkThatCurrentWordAppearsInTheFirstParagraph(){
         driver.findElement(By.xpath("//a[@href='http://ru.lipsum.com/']")).click();
         String elementText = driver.findElement(By.tagName("p")).getText();
-        Assert.assertTrue(elementText.contains("рыба"), "рыба");
+        Assert.assertTrue(elementText.contains("рыба"));
     }
 
     @Test
     public void checkThatDefaultSettingResultAccordingToExpectations(){
         driver.findElement(By.xpath("//input[@type='submit']")).click();
         String elementText = driver.findElement(By.tagName("p")).getText();
-        Assert.assertTrue(elementText.contains("Lorem ipsum dolor sit amet, consectetur adipiscing elit"), "Lorem ipsum dolor sit amet, consectetur adipiscing elit");
+        Assert.assertTrue(elementText.contains("Lorem ipsum dolor sit amet, consectetur adipiscing elit"));
     }
 
     @Test
@@ -46,7 +46,7 @@ public class LipsumTests {
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys("10");
         driver.findElement(By.xpath("//input[@type='submit']")).click();
         String elementText = driver.findElement(By.id("generated")).getText();
-        Assert.assertTrue(elementText.contains("10 words"), "10 words");
+        Assert.assertTrue(elementText.contains("10 words"));
     }
 
     @Test
@@ -56,7 +56,7 @@ public class LipsumTests {
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys("-1");
         driver.findElement(By.xpath("//input[@type='submit']")).click();
         String elementText = driver.findElement(By.id("generated")).getText();
-        Assert.assertTrue(elementText.contains("5 words"), "5 words");
+        Assert.assertTrue(elementText.contains("5 words"));
     }
 
     @Test
@@ -66,7 +66,7 @@ public class LipsumTests {
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys("0");
         driver.findElement(By.xpath("//input[@type='submit']")).click();
         String elementText = driver.findElement(By.id("generated")).getText();
-        Assert.assertTrue(elementText.contains("5 words"), "5 words");
+        Assert.assertTrue(elementText.contains("5 words"));
     }
 
     @Test
@@ -76,7 +76,7 @@ public class LipsumTests {
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys("5");
         driver.findElement(By.xpath("//input[@type='submit']")).click();
         String elementText = driver.findElement(By.id("generated")).getText();
-        Assert.assertTrue(elementText.contains("5 words"), "5 words");
+        Assert.assertTrue(elementText.contains("5 words"));
     }
 
     @Test
@@ -86,7 +86,7 @@ public class LipsumTests {
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys("20");
         driver.findElement(By.xpath("//input[@type='submit']")).click();
         String elementText = driver.findElement(By.id("generated")).getText();
-        Assert.assertTrue(elementText.contains("20 words"), "20 words");
+        Assert.assertTrue(elementText.contains("20 words"));
     }
 
     @Test
@@ -96,7 +96,7 @@ public class LipsumTests {
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys("20");
         driver.findElement(By.xpath("//input[@type='submit']")).click();
         String elementText = driver.findElement(By.id("generated")).getText();
-        Assert.assertTrue(elementText.contains("20 bytes"), "20 bytes");
+        Assert.assertTrue(elementText.contains("20 bytes"));
     }
 
     @Test
@@ -106,7 +106,7 @@ public class LipsumTests {
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys("10");
         driver.findElement(By.xpath("//input[@type='submit']")).click();
         String elementText = driver.findElement(By.id("generated")).getText();
-        Assert.assertTrue(elementText.contains("10 bytes"), "10 bytes");
+        Assert.assertTrue(elementText.contains("10 bytes"));
     }
 
     @Test
@@ -116,11 +116,11 @@ public class LipsumTests {
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys("-1");
         driver.findElement(By.xpath("//input[@type='submit']")).click();
         String elementText = driver.findElement(By.id("generated")).getText();
-        Assert.assertTrue(elementText.contains("5 bytes"), "5 bytes");
+        Assert.assertTrue(elementText.contains("5 bytes"));
     }
 
     @Test
-    public void checkResultsOfCheckbox(){
+    public void checkThatResultsInCheckboxNoStarsWithLoremIpsum(){
         driver.findElement(By.xpath("//input[@type='checkbox']")).click();
         driver.findElement(By.xpath("//input[@type='submit']")).click();
         String elementText = driver.findElement(By.tagName("p")).getText();

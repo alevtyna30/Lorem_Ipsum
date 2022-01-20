@@ -17,8 +17,6 @@ public class RadioButton extends BasePage {
 
     public void clickButton(String buttonName) {
         radioButtonGroup.findElement(By.xpath(String.format("//input[@id='%s']", buttonName))).click();
-
     }
-
 }
 

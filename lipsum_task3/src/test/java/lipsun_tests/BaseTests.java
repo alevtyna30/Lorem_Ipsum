@@ -13,8 +13,8 @@ import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
 public class BaseTests {
 
-    private WebDriver driver;
-    private static final String LIPSUM_URL = "https://www.lipsum.com/";
+    public WebDriver driver;
+    public static final String LIPSUM_URL = "https://www.lipsum.com/";
 
     @BeforeTest
     public void profileSetUp() {
@@ -23,6 +23,7 @@ public class BaseTests {
 
     @BeforeMethod
     public void testsSetUp() {
+
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(LIPSUM_URL);
