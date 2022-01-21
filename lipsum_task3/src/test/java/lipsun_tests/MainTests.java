@@ -30,7 +30,6 @@ public class MainTests extends BaseTests {
    @Test
     public void checkThatResultsInCheckboxNoStarsWithLoremIpsum() {
         getMainPage().clickOnCheckbox();
-        getMainPage().clickOnCheckbox();
         getSearchResultsPage().getParagraphText();
       Assert.assertFalse(getSearchResultsPage().getParagraphText().getText().startsWith(NOT_STARS_WITH));
     }
